@@ -1,6 +1,12 @@
 package 每日刷题.颠倒二进制位;
 
 public class Solution {
+
+    /*
+     方法一：逐位颠倒
+     时间复杂度：O(log n)
+     空间复杂度：O(1)
+     */
     public int reverseBits(int n){
         int rev = 0;
         for (int i = 0; i < 32 && n != 0; i++) {
@@ -15,6 +21,11 @@ public class Solution {
     private static final int M4 = 0x0f0f0f0f;
     private static final int M8 = 0x00ff00ff;
 
+    /*
+     位运算分治
+     时间复杂度：O(1)
+     空间复杂度：O(1)
+     */
     public int reverseBits2(int n){
         n = n >>> 1 & M1 | (n & M1) << 1;
         n = n >>> 2 & M2 | (n & M2) << 2;

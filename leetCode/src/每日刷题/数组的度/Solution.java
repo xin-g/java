@@ -33,7 +33,7 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        int shortestSubArray = new Solution().findShortestSubArray(new int[]{1,2,2,3,1});
+        int shortestSubArray = new Solution().findShortestSubArray(new int[]{2,1,2,3,1});
         System.out.println(shortestSubArray);
     }
 }
