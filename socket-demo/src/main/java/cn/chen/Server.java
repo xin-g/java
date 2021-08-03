@@ -15,6 +15,7 @@ public class Server {
             System.out.println("Socket服务器开始运行。。。");
             ServerSocket serverSocket = new ServerSocket(9999);
             while (true){
+                //监听9999端口,该方法阻塞，等待连接，直到连接成功返回一个新的socket
                 Socket socket = serverSocket.accept();
                 new Thread(new ServerListen(socket)).start();
                 new Thread(new ServerSend(socket)).start();
