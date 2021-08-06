@@ -1,0 +1,15 @@
+package cn.chen.建造者模式.entity;
+
+import cn.chen.建造者模式.service.Impl.itemImpl.Burger;
+
+public class VegBurger extends Burger {
+    @Override
+    public String name() {
+        return "Veg Burger";
+    }
+
+    @Override
+    public float price() {
+        return 25.0f;
+    }
+}
